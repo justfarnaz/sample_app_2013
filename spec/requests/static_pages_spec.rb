@@ -34,5 +34,30 @@ describe "StaticPages" do
    end
  end
  
+ describe "Contact" do
+   it "Should have 'Contact' in its content" do 
+     visit '/static_pages/contact'
+     page.should have_selector('h1', :text => "Contact Us")
+   end
+   
+   it "Should have the right title" do
+     visit '/static_pages/contact' 
+     page.should have_selector('title', :text => "Ruby on Rails | Contact Us")
+   end
+   
+ end
   
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
